@@ -1,0 +1,116 @@
+.benefits {
+    padding: 140px 0;
+    background: url(../img/benefits-bg.png)no-repeat top right;
+
+    @media (max-width:375px) {
+        padding: 50px 0;
+    }
+
+    &__inner {
+        display: flex;
+        align-items: flex-end;
+
+        @media (max-width:1024px) {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    &__text {
+        max-width: 671px;
+
+        @media (max-width:1024px) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    // &__title {}
+
+    &__descr {
+        margin-bottom: 56px;
+    }
+
+    &__items {
+        max-width: 500px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+    &__item {
+        cursor: pointer;
+        margin: 0 0 10px 0;
+        padding: 40px 60px 40px 160px;
+        position: relative;
+        transition: $transition;
+
+        @media (max-width:375px) {
+            padding: 20px 15px 20px 100px;
+        }
+
+        &:hover {
+            background: #F3FBF8;
+
+            .benefits__item-img {
+                background: #fff;
+            }
+        }
+    }
+
+    &__item-img {
+        position: absolute;
+        left: 60px;
+        top: 50%;
+        transform: translateY(-50%);
+
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #f3fbf8;
+        transition: $transition;
+
+        @media (max-width:375px) {
+            left: 0px;
+        }
+    }
+
+    &__item-title {
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 30px;
+        color: $black;
+        margin-bottom: 8px;
+    }
+
+    &__item-descr {
+        font-size: 14px;
+        line-height: 20px;
+        color: $grey;
+    }
+
+    &__btn {
+        cursor: pointer;
+        transition: $transition;
+
+        &:hover {
+            transform: translateY(10px);
+        }
+    }
+
+    &__img {
+        width: 600px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+            width: 100%;
+        }
+    }
+}

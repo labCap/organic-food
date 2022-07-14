@@ -1,0 +1,140 @@
+@import 'rem';
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Rosarivo&display=swap');
+
+// ##################################################################################################################
+
+$font-sans: 'DM Sans', sans-serif;
+$font-rosarivo: 'Rosarivo', serif;
+$font-weight: 400;
+
+$black: #222;
+$green: #09A66D;
+$green-hover: #06794f;
+$green-active: #0bb878;
+$grey: #555;
+$transition: all .2s linear;
+
+// ##################################################################################################################
+
+body {
+    font-family: $font-sans;
+    font-weight: $font-weight;
+    color: $black;
+}
+
+a {
+    font-family: $font-sans;
+    font-weight: $font-weight;
+    color: $black;
+    display: inline-block;
+}
+
+// ##################################################################################################################
+
+.wrapper {
+    min-height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.main {
+    flex: 1 1 100%;
+}
+
+.container {
+    max-width: 1270px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.btn {
+    font-size: 18px;
+    line-height: 20px;
+    color: #fff;
+    padding: 10px 23px;
+    background: $green;
+    border-radius: 8px;
+    transition: $transition;
+
+    &:hover {
+        background: $green-hover;
+    }
+
+    &:active {
+        background: $green-active;
+    }
+}
+
+.btn-circle {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 30px;
+    display: flex;
+    align-items: center;
+    transition: $transition;
+
+    span {
+        margin: 0 0 0 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: $green;
+        width: 64px;
+        height: 64px;
+        border-radius: 50%;
+        transition: $transition;
+    }
+
+    &:hover {
+        color: $green-hover;
+
+        span {
+            background: $green-hover;
+        }
+    }
+
+    &:active {
+        color: $green-active;
+
+        span {
+            background: $green-active;
+        }
+    }
+}
+
+.title {
+
+    font-family: $font-rosarivo;
+    font-weight: 700;
+    font-size: 70px;
+    line-height: 90px;
+    padding-bottom: 20px;
+
+    @media (max-width:425px) {
+        font-size: 50px;
+        line-height: 80px;
+    }
+
+    @media (max-width:375px) {
+        font-size: 33px;
+        line-height: 55px;
+    }
+}
+
+.descr {
+    font-size: 18px;
+    line-height: 30px;
+    color: $grey;
+}
+
+// ##################################################################################################################
+
+@import 'header';
+@import 'intro';
+@import 'benefits';
+@import 'special';
+@import 'about';
+@import 'add';
+@import 'footer';
